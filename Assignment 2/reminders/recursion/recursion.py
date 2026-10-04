@@ -25,8 +25,10 @@ def brute_force_recursively(target=100, position=0, base=10, decimal_places=0):
 	# print(target)
 	if position == decimal_places:
 		return 1
-	print('loop again')
-	return brute_force_recursively(target, position + 1, base, decimal_places)
+	s = str(target)
+	char = s[decimal_places - 1 - position]
+	digit = ord(char)-ord('a') if char.isalpha() else int(char)
+	return digit * base**position + brute_force_recursively(target, position + 1, base, decimal_places)
 	# else: return target
 
 
