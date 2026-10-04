@@ -64,5 +64,5 @@ print(brute_force_recursively('aabca', 0, 26, 5))
 # ((26^3)*15)+
 # ((26^4)*0)+1
 # = 274071 tries
-# print(brute_force_recursively('apple', 0, 26, 5))
+print(brute_force_recursively('apple', 0, 26, 5))
 
